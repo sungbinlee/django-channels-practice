@@ -3,6 +3,7 @@
 Django Channels를 활용한 비동기 웹 애플리케이션 연습 레포지토리
 
 ## Overview
+![ezgif-1-62828656fc](https://github.com/sungbinlee/django-channels-practice/assets/52542229/78db0a1e-20cd-4643-987a-c4f05423c0bc)
 
 채팅 서비스의 핵심은 실시간 메세징
 
@@ -45,7 +46,8 @@ Django Channels를 활용한 비동기 웹 애플리케이션 연습 레포지�
 
 ## 메시지 흐름
 
-![Alt text](image.png)
+![제목 없는 다이어그램 drawio (1)](https://github.com/sungbinlee/django-channels-practice/assets/52542229/3fe82112-f638-4d16-b894-e9fe3c727831)
+
 채널스의 Consumer Instance는 레디스의 Pub/Sub과 유저와의 메세지 중개자 역할을 하며각 웹 소켓 연결마다 하나씩 생성합니다.
 유저 A -송신-> Consumer Instance -송신-> Redis Pub/Sub -> 채팅방에 있는 다른 유저들의 Consumer Instance를 경유 -> 유저 B/C/D
 
